@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Hello patient</title>
+<script src="one.js">
+
+</script>
+</head>
+<body onload="firstfocus();">
+
+<form name="reg" id="reg" method="post" action="two.jsp" >
+            <center>
+            <table border="1" width="30%" cellpadding="3">
+                <thead>
+                    <tr>
+                        <th colspan="2">Login Here</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FirstName</td>
+                        <td><input type="text" name="uname" value="" onblur="firstname()"/></td>
+                    </tr>
+                   
+                    <tr>
+                    <td>Lastname</td>
+                    <td><input type="text" name="lname" value="" onblur="lastname()" /></td>
+                    
+                    </tr>
+                     <tr>
+                        <td>Age</td>
+                        <td><input type="int" name="f_age" id="f_age" value="" /></td>
+                    </tr>
+                     <tr>
+                        <td>DOB</td>
+                        <td><input type="text" id="f_dob" name="f_dob" placeholder="Enter in DD/MM/YYYY" name="Dob" value="" onblur="validateAge()" /></td>
+                    </tr>
+                     <tr>
+                        <td>sex</td>
+  <!-- <td><input type="radio" name="sex" value="male"/>Male   </td>
+<td><input type="radio" name="sex" value="female"/>Female </td> -->
+
+<td><Select id="f_sex" name="f_sex" onblur="validateSex()">
+	<option value="">Select one option</option>
+	<option value="male">Male</option>
+	<option value="female">Female</option>	
+</Select>
+</tr> 
+                    
+                    <tr>
+                    <td>Phone number</td>
+                    <td><input type="text" name="phn" value="" onblur="phonenumber(document.reg.phn)"/></td>
+                    </tr>
+                    <tr>
+                    <td>free text information</td>
+                    <td><textarea rows="5" cols="50" name="text_area"  form="reg"></textarea></td>
+              </tr>     
+                
+                        <td><input type="submit" value="submit" id="submitbtn"/></td>
+                        <td><input type="reset" value="Reset" /></td>
+                    </tr>
+
+  
+                
+</body>
+
+</html>
